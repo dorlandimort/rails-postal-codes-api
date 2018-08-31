@@ -2,6 +2,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  user: postgres
+  password: toor
 development:
   <<: *default
   database: postal_codes_development
@@ -11,5 +14,3 @@ test:
 production:
   <<: *default
   database: postal_codes_production
-  username: postal_codes
-  password: <%= ENV['POSTAL_CODES_DATABASE_PASSWORD'] %>
