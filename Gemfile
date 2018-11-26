@@ -18,6 +18,7 @@ group :development, :test do
 end
 
 gem 'rubyzip', '>= 1.1.0'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
