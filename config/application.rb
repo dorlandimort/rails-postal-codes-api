@@ -33,7 +33,7 @@ module PostalCodes
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins /\Ahttps?:\/\/([a-z0-9]+[.])*karimnot.com\z/
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
